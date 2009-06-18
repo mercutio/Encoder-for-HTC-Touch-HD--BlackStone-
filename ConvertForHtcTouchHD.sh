@@ -1,4 +1,9 @@
 #!/bin/bash
+# USAGE : ConvertForHtcTouchHD.sh FichierAEncoder FichierDeDestination.mp4
+#
+# Futures possibles modifications : 
+# - possibilité d'encoder à la suite plusieurs fichiers (changer le 2ème paramètre en chemin du répertoire de destination)
+
 
 AUDIO_BITRATE="128"
 INPUT_FILE=${1}
@@ -50,7 +55,7 @@ mencoder ${INPUT_FILE} -passlogfile ${LOG_FILE} -of avi -ofps ${ID_VIDEO_FPS} -s
 # echo $?
 if [ $? -eq 0 ]; then
     
-
+# possibilité futur de gérer le nombre de passes ?
 #     if [ ${NB_PASS} -gt 2 ]; then
 # 	NB_PASS=$(echo "${NB_PASS}-1" | bc)
 # 	for i in ${NB_PASS}; do
