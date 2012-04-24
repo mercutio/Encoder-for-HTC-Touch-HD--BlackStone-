@@ -28,6 +28,7 @@ done
 #echo ${ID_VIDEO_WIDTH}
 #echo ${ID_VIDEO_ASPECT}
 
+# Résolution HTC Touch HD : 800 x 480
 if [ ${ID_VIDEO_WIDTH} -lt 800 ]
     then #echo $(( ${ID_VIDEO_WIDTH} / ${ID_VIDEO_HEIGHT} ))
     VIDEO_ASPECT=$(echo "${ID_VIDEO_WIDTH}/${ID_VIDEO_HEIGHT}" | bc -l)
